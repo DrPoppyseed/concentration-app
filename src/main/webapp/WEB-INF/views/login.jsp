@@ -9,11 +9,11 @@
 </head>
 
 <body>
-	Hello!
 	<div>
 		<form action="/login.do" method="post">
+			<p><font color="red">${errorMessage}</font></p>
 			Username: <input type="text" name="username"/><br>
-			Password: <input type="password" name="password"><br>
+			Password: <input type="password" name="password"/><br>
 			<input type="submit" value="Login"/>
 		</form>
  	</div>

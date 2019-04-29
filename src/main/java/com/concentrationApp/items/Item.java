@@ -6,6 +6,11 @@ public class Item {
 	private String description;
 	private int itemCategory;
 	private int userId;
+	
+	// Partial constructor called by another Item object
+	public Item(Item item) {
+		this(item.getItemName(), item.getDescription(), item.getItemCategory(), item.getUserId());
+	}
 
 	// partial constructor
 	public Item(String itemName, int itemCategory, int userId) {
@@ -101,12 +106,8 @@ public class Item {
 	
 	@Override
 	public String toString() {
-		String category = (itemCategory == 1)? "Must do" : "Want to do";
-	
-		return "Item name: " + itemName +
-				"\nItem Description: " + description + 
-				"\nItem category" + category +
-				"\nUser id" + userId;
+		return "(\"" + itemName + "\", \"" + description + 
+				"\", " + itemCategory + ", " + userId + ")";
 	}
 	
 }
