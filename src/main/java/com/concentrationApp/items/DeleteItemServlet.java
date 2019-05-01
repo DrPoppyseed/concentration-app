@@ -25,6 +25,9 @@ public class DeleteItemServlet extends HttpServlet {
 		int item_category = Integer.parseInt(itemFields[2].trim());
 		int user_id = Integer.parseInt(itemFields[3].trim());
 		
+		String itemName = request.getParameter("item");
+		System.out.println(itemName);
+		
 		try {
 			itemsService.deleteItem(item_name, item_description, item_category, user_id);
 		} catch (ClassNotFoundException | SQLException e) {

@@ -10,13 +10,13 @@
 	Your Must-dos are:
 	<ol>
 		<c:forEach items="${items_1}" var="item">
-			<li>${item.itemName}<a href="/delete-item.do?item=${item}">Delete</a></li>
+			<li>${item.itemName}<a href="/delete-item.do?item=${item.itemName}, $">Delete</a></li>
 		</c:forEach>
 	</ol>	
 	Your Wantto-dos are:
 	<ol>
 		<c:forEach items="${items_2}" var="item">
-			<li>${item.itemName}<a href="/delete-item.do?item=${item}">Delete</a></li>
+			<li>${item.itemName}<a href="/delete-item.do?item=${item.toString()}">Delete</a></li>
 		</c:forEach>
 	</ol>
 	
